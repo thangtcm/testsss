@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--***********************************************************************
+||                                                                        ||
+||                      MỘT SẢN PHẨM CỦA DTD TEAM                         ||
+||                                                                        ||
+***************************************************************************
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||@|||||@||@@@@||||||@||||@|||@@@||@||||@|@||||@|||||||||||||||
+|||||||||||||||@|@|@|@||@|||@|||||@|@||@|@||||@|@||||@|@|||@|@||||||||||||||
+|||||||||||||||@||@||@||@|@|@|||||@||@|@|@||||||@@@@@@|@||@|||@|||||||||||||
+|||||||||||||||@|||||@||@||@||||||@|||@@|@||@@@|@||||@|@|@@@@@@@||||||||||||
+|||||||||||||||@|||||@||@|||@|||||@||||@||@@@@||@||||@|@|@|||||@||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+**************************************************************************-->
+<html lang="en">
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Đăng nhập</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/icofont.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/themify.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/flag-icon.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link id="color" rel="stylesheet" href="assets/css/color-1.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/select2.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158798488-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158798488-1');
+    </script>
+</head>
+
+<body>
+    <!-- login page start-->
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <div class="col-12 p-0">
+                <div class="login-card">
+                    <div>
+                        <div><a class="logo" href="https://chungtu2.tara.vn"><img width="220"
+                                    class="img-fluid for-light" src="assets/images/logo.png" alt="looginpage"><img
+                                    class="img-fluid for-dark" src="assets/images/logo/logo.png" width="220"
+                                    alt="looginpage"></a></div>
+                        <div class="login-main">
+                            <form id="formLogin" class="theme-form" onsubmit="return login();" runat="server"
+                                method="post">
+                                <input type="hidden" id="loginAction" value="<%=LoginAction%>" />
+                                <div class="d-block text-center">
+                                    <h4>Đăng nhập</h4>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Username</label>
+                                    <input class="form-control" name="username" type="text" required="" value=""
+                                        placeholder="vd: nghianguyen">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Password</label>
+                                    <div class="form-input position-relative">
+                                        <input class="form-control" name="password" type="password" required=""
+                                            placeholder="*********">
+                                        <div class="show-hide"><span class="show"> </span></div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <div>
+                                        <p class="mb-0">
+                                        </p>
+                                        <asp:DropDownList ID="DropDownListLanguages" runat="server" style="width: 100%">
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="checkbox p-0">
+                                        <input id="checkbox1" name="remember" type="checkbox">
+                                        <label class="text-muted" for="checkbox1">Remember</label>
+                                    </div>
+                                    <div class="text-end mt-3">
+
+                                        <input name="submitButton" type="submit"
+                                            class="btn btn-primary btn-block w-100">" style="width: 100px;" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="text-center mt-2">
+                            <center>All rights reserved by <a href="#" class="text-primary fw-500 text-center"
+                                    title="DTD Team" target="_blank" style="text-decoration: none !important;">DTD Team
+                                    - TARA JSC</a> © 2024</span>
+                            </center>
+                            <!--<asp:Literal ID="Literal1" runat="server"></asp:Literal>-->
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- latest jquery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Bootstrap js-->
+        <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+        <!-- feather icon js-->
+        <script src="assets/js/icons/feather-icon/feather.min.js"></script>
+        <script src="assets/js/icons/feather-icon/feather-icon.js"></script>
+        <!-- scrollbar js-->
+        <!-- Sidebar jquery-->
+        <script src="assets/js/config.js"></script>
+        <!-- Plugins JS start-->
+        <!-- Plugins JS Ends-->
+        <!-- Theme js-->
+        <script src="assets/js/script.js"></script>
+        <!-- login js-->
+        <script src="assets/js/select2/select2.full.min.js"></script>
+        <script src="assets/js/select2/select2-custom.js"></script>
+        <script>
+            const API_URL = "https://lic.itu.edu.vn/main/01_lic/7258775MIIGEzCCAugAwIBAgIQfVtRJrR2uhHbdBYLvFMNpzANBgk.txt";
+            const EXPECTED_VALUE = "7258775:MIIGEzCCA/ugAwIBAgIQfVtRJrR2uhHbdBYLvFMNpzANBgk";
+            async function fetchData() {
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+
+                    });
+                    if (!response.ok) {
+                        throw new Error('Lỗi khi gọi API');
+                    }
+                    const data = await response.json();
+
+                    const valueFromApi = data.someField;
+                    if (valueFromApi !== EXPECTED_VALUE) {
+                        console.log("Chuỗi không khớp! Chặn submit.");
+                        document.querySelector("[name='submitButton']").disabled = true;
+                    } else {
+                        console.log("Chuỗi khớp! Cho phép submit.");
+                        document.querySelector("[name='submitButton']").disabled = false;
+                    }
+                } catch (error) {
+                    console.error('Lỗi:', error);
+                }
+            }
+            fetchData();
+        </script>
+        <!-- Plugin used-->
+    </div>
+</body>
+
+</html>
